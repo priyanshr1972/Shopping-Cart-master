@@ -15,7 +15,7 @@ app.get("/setcookies",(req,res)=>{
 
 
 app.get("/seecookies",(req,res)=>{
-    res.send(res.cookies)
+    res.send(req.cookies)
 })
 app.listen(4800,()=>{
     console.log("server running");
