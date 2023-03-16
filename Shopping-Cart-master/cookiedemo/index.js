@@ -6,11 +6,10 @@ const cookieparser = require('cookie-parser');
 app.use(cookieparser("this is secret"));
 app.set('views',path.join(__dirname,'views'))
 app.get("/setcookies",(req,res)=>{
-    res.cookie("name","kartik",{maxAge: 7*24*60*60*1000,httpOnly:true})
-    .cookie("location","delhi",{maxAge: 7*24*60*60*1000,httpOnly:true})
-    .cookie("language","english",{maxAge: 7*24*60*60*1000,httpOnly:true})
-    .cookie("age","24",{maxAge: 7*24*60*60*1000,signed:true})
-    .cookie("login","true")
+    res.cookie("name","kartik")
+    .cookie("location","delhi")
+    .cookie("language","english")
+    .cookie("age","24")
     .send("cookie has created")
 })
 app.get("/login",(req,res)=>{
