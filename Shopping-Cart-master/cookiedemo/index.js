@@ -9,6 +9,7 @@ app.get("/setcookies",(req,res)=>{
     res.cookie("name","kartik")
     .cookie("location","delhi")
     .cookie("language","english")
+    .cookie("year","2002")
     .cookie("age","24")
     .send("cookie has created")
 })
